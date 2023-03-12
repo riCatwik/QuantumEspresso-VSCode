@@ -1,0 +1,53 @@
+{
+  "name": "QuantumEspresso-VSCode",
+  "displayName": "Quantum Espresso",
+  "description": "Quantum Espresso Input Syntax and Highlighting",
+  "version": "0.0.1",
+  "author": {
+    "name": "Ritwik Das",
+    "publisher": "ritwikdas",
+    "email": "ritwik.das@outlook.in",
+    "url": "https://ritwikdas.gitlab.io/"
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "quantum espresso",
+    "qe",
+    "qe input",
+    "density functional theory",
+    "dft",
+    "qe syntax highlighting"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "quantumespresso",
+        "aliases": [
+          "Quantum Espresso",
+          "quantumespresso"
+        ],
+        "extensions": [
+          ".in",
+          ".inp",
+          ".pw",
+          ".pwi",
+          ".qe",
+          ".qei"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "quantumespresso",
+        "scopeName": "source.qe",
+        "path": "./syntaxes/quantumespresso.tmLanguage.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Quantum Espresso",
+  "scopeName": "source.qe",
+  "fileTypes": [
+    "in",
+    "inp",
+    "pw",
+    "pwi",
+    "qe",
+    "qei"
+  ],
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#namelist"
+    },
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#option"
+    },
+    {
+      "include": "#card"
+    },
+    {
+      "include": "#floating-point"
+    },
+    {
+      "include": "#decimal"
+    },
+    {
+      "include": "#boolean"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "match": "!.*$",
+          "name": "comment.line"
+        }
+      ]
+    },
+    "namelist": {
+      "patterns": [
+        {
+          "name": "keyword.control.namelist",
+          "match": "&(control|system|electrons|ions|cell|fcp|rism|CONTROL|SYSTEM|ELECTRONS|IONS|CELL|FCP|RISM)"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "\\b(calculation|title|verbosity|restart_mode|wf_collect|nstep|iprint|tstress|tprnfor|dt|outdir|wfcdir|prefix|lkpoint_dir|max_seconds|etot_conv_thr|forc_conv_thr|disk_io|pseudo_dir|tefield|dipfield|lelfield|nberrycyc|lorbm|lberry|gdir|nppstr|gate|lfcp|trism)\\b"
+        },
+        {
+          "name": "keyword.system",
+          "match": "\\b(ibrav|celldm|A|B|C|cosAB|cosAC|cosBC|nat|ntyp|nbnd|tot_charge|starting_charge|tot_magnetization|starting_magnetization|ecutwfc|ecutrho|ecutfock|nr1|nr2|nr3|nr1s|nr2s|nr3s|nosym|nosym_evc|noinv|no_t_rev|force_symmorphic|use_all_frac|occupations|one_atom_occupations|starting_spin_angle|degauss|smearing|nspin|noncolin|ecfixed|qcutz|q2sigma|input_dft|ace|exx_fraction|screening_parameter|exxdiv_treatment|x_gamma_extrapolation|ecutvcut|nqx1|nqx2|nqx3|localization_thr|Hubbard_occ|Hubbard_alpha|Hubbard_beta|starting_ns_eigenvalue|dmft|dmft_prefix|ensemble_energies|edir|emaxpos|eopreg|eamp|angle1|angle2|lforcet|constrained_magnetization|fixed_magnetization|lambda|report|lspinorb|assume_isolated|esm_bc|esm_w|esm_efield|esm_nfit|lgcscf|gcscf_mu|gcscf_conv_thr|gcscf_beta|vdw_corr|london|london_s6|london_c6|london_rvdw|london_rcut|dftd3_version|dftd3_threebody|ts_vdw_econv_thr|ts_vdw_isolated|xdm|xdm_a1|xdm_a2|space_group|uniqueb|origin_choice|rhombohedral|zgate|relaxz|block|block_1|block_2|block_height)\\b"
+        },
+        {
+          "name": "keyword.electrons",
+          "match": "\\b(electron_maxstep|scf_must_converge|conv_thr|adaptive_thr|conv_thr_init|conv_thr_multi|mixing_mode|mixing_beta|mixing_ndim|mixing_fixed_ns|diagonalization|diago_thr_init|diago_cg_maxiter|diago_ppcg_maxiter|diago_david_ndim|diago_rmm_ndim|diago_rmm_conv|diago_gs_nblock|diago_full_acc|efield|efield_cart|efield_phase|startingpot|startingwfc|tqr|real_space)\\b"
+        },
+        {
+          "name": "keyword.ions",
+          "match": "\\b(ion_positions|ion_velocities|ion_dynamics|pot_extrapolation|wfc_extrapolation|remove_rigid_rot|ion_temperature|tempw|tolp|delta_t|nraise|refold_pos|upscale|bfgs_ndim|trust_radius_max|trust_radius_min|trust_radius_ini|w_1|w_2|fire_alpha_init|fire_falpha|fire_nmin|fire_f_inc|fire_f_dec|fire_dtmax)\\b"
+        },
+        {
+          "name": "keyword.cell",
+          "match": "\\b(cell_dynamics|press|wmass|cell_factor|press_conv_thr|cell_dofree)\\b"
+        },
+        {
+          "name": "keyword.fcp",
+          "match": "\\b(fcp_mu|fcp_dynamics|fcp_conv_thr|fcp_ndiis|fcp_mass|fcp_velocity|fcp_temperature|fcp_tempw|fcp_tolp|fcp_delta_t|fcp_nraise|freeze_all_atoms)\\b"
+        },
+        {
+          "name": "keyword.rism",
+          "match": "\\b(nsolv|closure|tempv|ecutsolv|solute_lj|solute_epsilon|solute_sigma|starting1d|starting3d|smear1d|smear3d|rism1d_maxstep|rism3d_maxstep|rism1d_conv_thr|rism3d_conv_thr|mdiis1d_size|mdiis3d_size|mdiis1d_step|mdiis3d_step|rism1d_bond_width|rism1d_dielectric|rism1d_molesize|rism1d_nproc|rism3d_conv_level|rism3d_planar_average|laue_nfit|laue_expand_right|laue_expand_left|laue_starting_right|laue_starting_left|laue_buffer_right|laue_buffer_left|laue_both_hands|laue_wall|laue_wall_z|laue_wall_rho|laue_wall_epsilon|laue_wall_sigma|laue_wall_lj6)\\b"
+        },
+        {
+          "name": "keyword.atomic_species",
+          "match": "\\b(X|Mass_X|PseudoPot_X)\\b"
+        },
+        {
+          "name": "keyword.atomic_positions",
+          "match": "\\b(X|x|y|z|if_pos(1)|if_pos(2)|if_pos(3))\\b"
+        },
+        {
+          "name": "keyword.k_points",
+          "match": "\\b(nks|xk_x|xk_y|xk_z|wk|nk1|nk2|nk3|sk1|sk2|sk3)\\b"
+        },
+        {
+          "name": "keyword.additional_k_points",
+          "match": "\\b(nks_add|k_x|k_y|k_z|wk_)\\b"
+        },
+        {
+          "name": "keyword.cell_parameters",
+          "match": "\\b(v1|v2|v3)\\b"
+        },
+        {
+          "name": "keyword.constraints",
+          "match": "\\b(nconstr|constr_tol|constr_type|constr(1)|constr(2)|constr(3)|constr(4)|constr_target)\\b"
+        },
+        {
+          "name": "keyword.occupations",
+          "match": "\\b(f_inp1|f_inp2)\\b"
+        },
+        {
+          "name": "keyword.attomic_velocities",
+          "match": "\\b(V|vx|vy|vz)\\b"
+        },
+        {
+          "name": "keyword.atomic_forces",
+          "match": "\\b(X|fx|fy|fz)\\b"
+        },
+        {
+          "name": "keyword.solvents",
+          "match": "\\b(X|Density|Molecule|X|Density_Left|Density_Right|Molecule)\\b"
+        },
+        {
+          "name": "keyword.hubbard",
+          "match": "\\b(label(1)-manifold(1)|u_val(1)|label(1)-manifold(1)|j0_val(1)|paramType(1)|label(1)-manifold(1)|paramValue(1)|label(I)-manifold(I)|u_val(I)|label(I)-manifold(I)|j0_val(I)|label(I)-manifold(I)|label(J)-manifold(J)|I|J|v_val(I,J))\\b"
+        }
+      ],
+      "name": "storage.type.keyword"
+    },
+    "option": {
+      "patterns": [
+        {
+          "name": "string.logical.option",
+          "patterns": [
+            {
+              "name": "keyword.logical.option",
+              "match": "\\b(true|TRUE|false|FALSE)\\b"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.option",
+          "begin": "\"|'",
+          "end": "\"|'",
+          "patterns": [
+            {
+              "name": "keyword.control.calculation.option",
+              "match": "\\b(scf|nscf|bands|relax|md|vc-relax|vc-md)\\b"
+            },
+            {
+              "name": "keyword.control.verbosity.option",
+              "match": "\\b(high|low)\\b"
+            },
+            {
+              "name": "keyword.control.restart_mode.option",
+              "match": "\\b(from_scratch|restart)\\b"
+            },
+            {
+              "name": "keyword.control.prefix.option",
+              "match": "\\b(pwscf)\\b"
+            },
+            {
+              "name": "keyword.control.disk_io.option",
+              "match": "\\b(high|medium|low|nowf|none)\\b"
+            },
+            {
+              "name": "keyword.system.ibrav.option",
+              "match": "\\b(0|1|2|3|-3|4|5|-5|6|7|8|9|-9|91|10|11|12|-12|13|-13|14)\\b"
+            },
+            {
+              "name": "keyword.system.occupations.option",
+              "match": "\\b(smearing|tetrahedra|tetrahedra_lin|tetrahedra_opt|fixed|from_input)\\b"
+            },
+            {
+              "name": "keyword.system.smearing.option",
+              "match": "\\b(gaussian|gauss|methfessel-paxton|m-p|mp|marzari-vanderbilt|cold|m-v|mv|fermi-dirac|f-d|fd)\\b"
+            },
+            {
+              "name": "keyword.system.nspin.option",
+              "match": "\\b(1|2|4)\\b"
+            },
+            {
+              "name": "keyword.system.exxdiv_treatment.option",
+              "match": "\\b(gygi-baldereschi|vcut_spherical|vcut_ws|none)\\b"
+            },
+            {
+              "name": "keyword..option",
+              "match": "\\b()\\b"
+            }
+          ]
+        },
+        {
+          "name": "string.nonquoted.option",
+          "patterns": [
+            {
+              "name": "keyword.logical.option",
+              "match": "\\b(.true.|.TRUE.|.false.|.FALSE.)\\b"
+            },
+            {
+              "name": "keyword.atomic_positions.option",
+              "match": "\\b(alat|bohr|angstrom|crystal|crystal_sg)\\b"
+            },
+            {
+              "name": "keyword.k_points.option",
+              "match": "\\b(tpiba|automatic|crystal|gamma|tpiba_b|crystal_b|tpiba_c|crystal_c)\\b"
+            },
+            {
+              "name": "keyword.cell_parameters.option",
+              "match": "\\b(alat|bohr|angstrom)\\b"
+            },
+            {
+              "name": "keyword.solvents.option",
+              "match": "\\b(1/cell|mol/L|g/cm^3)\\b"
+            },
+            {
+              "name": "keyword.hubbard.option",
+              "match": "\\b(atomic|ortho-atomic|norm-atomic|wf|pseudo)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    "card": {
+      "patterns": [
+        {
+          "name": "keyword.control.card",
+          "match": "\\b(ATOMIC_SPECIES|ATOMIC_POSITIONS|K_POINTS|CELL_PARAMETERS|CONSTRAINTS|OCCUPATIONS)\\b"
+        }
+      ]
+    },
+    "floating-point": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float",
+          "match": "\\b([0-9]+[Ee][-]?[0-9]+|([0-9]*\\.[0-9]+|[0-9]+\\.)([Ee][-]?[0-9]+)?)[fFlL]?\\b"
+        }
+      ]
+    },
+    "decimal": {
+      "patterns": [
+        {
+          "name": "constant.numeric.decimal",
+          "match": "\\b([1-9][0-9]*|0)([Uu]([Ll]|LL|ll)?|([Ll]|LL|ll)[Uu]?)?\\b"
+        }
+      ]
+    },
+    "boolean": {
+      "patterns": [
+        {
+          "name": "string.quoted.boolean",
+          "patterns": [
+            {
+              "name": "constant.language.boolean.true",
+              "match": "\\b(.true.|.TRUE.)\\b",
+              "captures": {
+                "0": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            },
+            {
+              "name": "constant.language.boolean.false",
+              "match": "\\b(.false.|.FALSE.)\\b",
+              "captures": {
+                "0": {
+                  "name": "constant.language.boolean.false"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "semanticClassifications": {
+    "comment": {
+      "type": "comment"
+    },
+    "namelist": {
+      "type": "preprocessor"
+    },
+    "keyword": {
+      "type": "keyword"
+    },
+    "option": {
+      "type": "type"
+    },
+    "card": {
+      "type": "identifier"
+    },
+    "number": {
+      "type": "number"
+    },
+    "boolean": {
+      "type": "boolean"
+    }
+  }
+}
