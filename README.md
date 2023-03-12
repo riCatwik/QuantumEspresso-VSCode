@@ -1,20 +1,27 @@
-# QuantumEspresso-VSCode README
+# QuantumEspresso-VSCode
 
-This is the README for your extension "QuantumEspresso-VSCode". After writing up a brief description, we recommend including the following sections.
+This "QuantumEspresso-VSCode" extension is a tool for grammar checking and syntax highlighting of the [Quantum ESPRESSO (QE)](https://www.quantum-espresso.org/) input file. 
+
+Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
+
+The Quantum ESPRESSO fortran package can be downloaded from [here](https://www.quantum-espresso.org/download-page/). 
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The following extensions can be used for QE input files: 
 
-For example if there is an image subfolder under your extension project workspace:
+* .in
+* .inp
+* .pw
+* .pwi
+* .qe
+* .qei
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
+<!-- ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Nothing for this moment 
 
 ## Extension Settings
 
@@ -25,41 +32,35 @@ For example:
 This extension contributes the following settings:
 
 * `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `myExtension.thing`: Set to `blah` to do something. -->
 
-## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+
+
+
+## Known Issues / Issues Reporting
+
+To submit/report an issue, fill up [this form](https://ritwikdas.gitlab.io/contact/) or write to [ritwik.das@outlook.in](mailto:ritwik.das@outlook.in). Use "[QE-VSCode] Error Report" as the email subject. 
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+This is an open-source tool supported under [MIT license](./LICENSE). Feel free to use, distribute and contribute to the original [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode) GitHub code.  
 
 ### 1.0.0
 
-Initial release of ...
+The initial release of the [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode). 
 
-### 1.0.1
+<!-- ### 1.0.1
 
 Fixed issue #.
 
 ### 1.1.0
 
-Added features X, Y, and Z.
+Added features X, Y, and Z. -->
+
+## **Enjoy!**
 
 ---
 
-## Working with Markdown
+Copyright © 2023 - [Ritwik Das](https://ritwikdas.gitlab.io)
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

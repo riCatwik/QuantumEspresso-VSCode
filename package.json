@@ -2,7 +2,7 @@
   "name": "QuantumEspresso-VSCode",
   "displayName": "Quantum Espresso",
   "description": "Quantum Espresso Input Syntax and Highlighting",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {
     "name": "Ritwik Das",
     "publisher": "ritwikdas",
