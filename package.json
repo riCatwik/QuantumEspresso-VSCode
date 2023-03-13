@@ -2,10 +2,14 @@
   "name": "QuantumEspresso-VSCode",
   "displayName": "Quantum Espresso",
   "description": "Quantum Espresso Input Syntax and Highlighting",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riCatwik/QuantumEspresso-VSCode.git"
+  },
   "version": "1.0.0",
+  "publisher": "ritwikdas",
   "author": {
     "name": "Ritwik Das",
-    "publisher": "ritwikdas",
     "email": "ritwik.das@outlook.in",
     "url": "https://ritwikdas.gitlab.io/"
   },

@@ -4,6 +4,8 @@
 
 ##### Use `vsce publish --help` to get help
 
+##### To create a package: `vsce package --help`
+
 #####  Commands used: `vsce publish`, `vsce publish minor`, and `vsce publish patch` 
 
 These are commands used in the context of publishing Visual Studio Code extensions using the VS Code Extension Manager (VSCE) CLI.
