@@ -52,7 +52,7 @@ The initial release of the [QuantumEspresso-VSCode](https://github.com/riCatwik/
 
 ### 0.0.2
 
-A patch for `&SYSTEM` card `keyword`s. 
+A patch for `keyword`s in the `&SYSTEM` card. 
 
 
 <!-- ### 1.0.1

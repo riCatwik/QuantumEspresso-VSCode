@@ -2,9 +2,9 @@
 
 #### Version format: `major.minor.patch`
 
-##### Use `vsce publish --help` to get help
+##### To publish a package: use `vsce publish --help`
 
-##### To create a package: `vsce package --help`
+##### To create a package: use `vsce package --help`
 
 #####  Commands used: `vsce publish`, `vsce publish minor`, and `vsce publish patch` 
 
