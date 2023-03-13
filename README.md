@@ -50,7 +50,7 @@ This is an open-source tool supported under [MIT license](https://github.com/riC
 
 The initial release of the [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode). 
 
-### 0.0.2
+### 1.0.1
 
 A patch for `keyword`s in the `&SYSTEM` card. 
 
