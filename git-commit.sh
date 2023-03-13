@@ -9,4 +9,3 @@ git add .
 git commit -m "Committed: $TODAY from $HOST"
 git push
 git pull
-
