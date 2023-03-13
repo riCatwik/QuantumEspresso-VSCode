@@ -44,7 +44,7 @@ To submit/report an issue, fill up [this form](https://ritwikdas.gitlab.io/conta
 
 ## Release Notes
 
-This is an open-source tool supported under [MIT license](./LICENSE). Feel free to use, distribute and contribute to the original [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode) GitHub code.  
+This is an open-source tool supported under [MIT license](https://github.com/riCatwik/QuantumEspresso-VSCode/blob/main/LICENSE). Feel free to use, distribute and contribute to the original [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode) GitHub code.  
 
 ### 1.0.0
 
