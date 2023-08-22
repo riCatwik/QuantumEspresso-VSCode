@@ -42,7 +42,8 @@
           ".pw",
           ".pwi",
           ".qe",
-          ".qei"
+          ".qei",
+          ".out"
         ],
         "configuration": "./language-configuration.json"
       }

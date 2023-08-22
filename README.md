@@ -1,74 +1,48 @@
 # QuantumEspresso-VSCode
 
-This "QuantumEspresso-VSCode" extension is a tool for grammar checking and syntax highlighting of the [Quantum ESPRESSO (QE)](https://www.quantum-espresso.org/) input file. 
+Enhance your Quantum Espresso experience in VSCode with the **QuantumEspresso-VSCode** extension! This tool provides dedicated grammar checking and syntax highlighting tailored for [Quantum ESPRESSO (QE)](https://www.quantum-espresso.org/) input files.
 
-Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
+Quantum ESPRESSO is an esteemed suite of open-source computer codes designed for electronic-structure calculations and materials modeling at the nanoscale. This suite is grounded in density-functional theory, plane waves, and pseudopotentials.
 
-The Quantum ESPRESSO fortran package can be downloaded from [here](https://www.quantum-espresso.org/download-page/). 
+For those looking to get started with Quantum ESPRESSO, the Fortran package is available for download [here](https://www.quantum-espresso.org/download-page/).
 
 ## Features
 
-The following extensions can be used for QE input files: 
+- **Syntax Highlighting**: Enjoy clear and intuitive highlighting to make your QE input files visually appealing and readable.
+- **Grammar Checking**: Benefit from automated grammar checks to ensure your QE input files are formatted correctly.
+- **Supported File Extensions**: The extension works seamlessly with QE input files bearing the following extensions:
+  - .in
+  - .inp
+  - .pw
+  - .pwi
+  - .qe
+  - .qei
 
-* .in
-* .inp
-* .pw
-* .pwi
-* .qe
-* .qei
+## Requirements
 
+- VSCode version 1.50 or above (recommended).
+- [Quantum ESPRESSO (QE)](https://www.quantum-espresso.org/) version 7.2 or above Fortran package (optional, but enhances overall compatibility and performance).
 
+## How to Use
 
-<!-- ## Requirements
+1. Install **QuantumEspresso-VSCode** from the VSCode Marketplace.
+2. Launch or open your QE input files with any of the supported extensions.
+3. Experience improved syntax highlighting, grammar checks, and other features!
 
-Nothing for this moment 
+### Special Instructions for PWSCF Input Files
 
-## Extension Settings
+For those working with PWSCF input files, ensure they use the `.in`, `.out` extension for optimal functionality. This extension provides enhanced auto-completion and error checks specifically tailored for these files.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Known Issues and Reporting
 
-For example:
+Encounter an issue? We're here to help! To submit or report any issue, please fill out [this form](https://ritwikdas.gitlab.io/contact/). Alternatively, you can send an email to [ritwik.das@outlook.in](mailto:ritwik.das@outlook.in) using the subject line "[QE-VSCode] Error Report".
 
-This extension contributes the following settings:
+## Contribution and Licensing
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something. -->
-
-
-
-
-
-## Known Issues / Issues Reporting
-
-To submit/report an issue, fill up [this form](https://ritwikdas.gitlab.io/contact/) or write to [ritwik.das@outlook.in](mailto:ritwik.das@outlook.in). Use "[QE-VSCode] Error Report" as the email subject. 
-
-## Release Notes
-
-This is an open-source tool supported under [MIT license](https://github.com/riCatwik/QuantumEspresso-VSCode/blob/main/LICENSE). Feel free to use, distribute and contribute to the original [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode) GitHub code.  
-
-### 0.0.1
-
-The initial release of the [QuantumEspresso-VSCode](https://github.com/riCatwik/QuantumEspresso-VSCode). 
-
-### 1.0.1
-
-A patch for `keyword`s in the `&SYSTEM` card. 
-
-### 1.0.2
-
-Extension icon added. 
-
-<!-- ### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z. -->
+**QuantumEspresso-VSCode** is a community-driven, open-source project licensed under the [MIT license](https://github.com/riCatwik/QuantumEspresso-VSCode/blob/main/LICENSE). We welcome and appreciate contributions, suggestions, and feedback from the Quantum ESPRESSO community. Feel free to use, distribute, and contribute to the source code available on [GitHub](https://github.com/riCatwik/QuantumEspresso-VSCode).
 
 ## **Enjoy!**
 
 ---
 
-Copyright © 2023 - [Ritwik Das](https://ritwikdas.gitlab.io)
-
+&copy; 2023 - [Ritwik Das](https://ritwikdas.gitlab.io)
